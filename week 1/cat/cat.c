@@ -1,6 +1,8 @@
 #include "../cs50.h"
 #include <stdio.h>
 
+void meow(int times);
+
 int main(void)
 {
     int n;
@@ -8,9 +10,13 @@ int main(void)
     {
         n = get_int("What's n ? ");
     } while (n < 0);
+    meow(n);
+}
 
-    for (int i = 0; i < n; i++)
+void meow(int times)
+{
+    for (int i = 0; i < times; i++)
     {
-        printf("meow!\n");
+        printf("meow! (%i)\n", i + 1);
     }
 }
