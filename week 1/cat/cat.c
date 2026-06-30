@@ -1,16 +1,19 @@
 #include "../cs50.h"
 #include <stdio.h>
 
-void meow(int times);
-
 int main(void)
 {
+    int n = get_n();
+    meow(n);
+}
+
+int get_n() {
     int n;
     do 
     {
         n = get_int("What's n ? ");
     } while (n < 0);
-    meow(n);
+    return n;
 }
 
 void meow(int times)
