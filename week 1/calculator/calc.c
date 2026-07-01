@@ -22,15 +22,15 @@ int calc(int fn, int op, int sn)
     }
     else if (op == '-')
     {
-        result = fn + sn;
+        result = fn - sn;
     }
     else if (op == '*')
     {
-        result = fn + sn;
+        result = fn * sn;
     }
     else if (op == '/')
     {
-        result = fn + sn;
+        result = fn / sn;
     }
     return result;
 }
