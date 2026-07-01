@@ -1,21 +1,23 @@
 #include "../cs50.h"
 #include <stdio.h>
 
-int calc(int fn, int op, int sn);
+double calc(double fn, char op, double sn);
 
 int main() 
 {
     int fn = get_int("Enter first number: ");
-    int op = get_char("Enter operator: ");
+    char op = get_char("Enter operator: ");
     int sn = get_int("Enter second number: ");
 
-    int result = calc(fn, op, sn);
-    printf("%i %c %i = %i\n", fn, op, sn, result);
+    fn = (double)fn;
+    sn = (double)sn;
+    double result = calc(fn, op, sn);
+    printf("%i %c %i = %f\n", fn, op, sn, result);
 }
 
-int calc(int fn, int op, int sn)
+double calc(double fn, char op, double sn)
 {
-    int result;
+    double result;
     if (op == '+')
     {
         result = fn + sn;
